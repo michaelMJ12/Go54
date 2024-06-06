@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="{% static 'assets/images/mike.jpg' %}" rel="icon">
+    <!-- <link href="{% static 'img/clogo.jpg' %}" rel="icon"> -->
+    <link href="{% static 'assets/images/mike.jpg' %}" rel="apple-touch-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2{
+            text-align: center;
+            color: rgb(48, 48, 113);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'assets/images/mike.jpg' %}" alt="Logo">
+        </div>
+        <h2>Registration Form</h2>
+        {% if messages %}
+        <ul class="messages" style="text-align: center; list-style: none;">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %} {% if message.tags == 'success' %}style="color: green;"{% elif message.tags == 'error' %}style="color: red;"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+            {% endif %}
+        <form action="{% url 'submit' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="name">FirstName:</label>
+            <input type="text" id="name" name="first_name" maxlength="200" required>
+
+            <label for="name">MiddleName:</label>
+            <input type="text" id="name" name="middle_name" maxlength="200" required>
+
+            <label for="name">LastName:</label>
+            <input type="text" id="name" name="last_name" maxlength="200" required>
+
+            <label for="name">Gender:</label>
+            <input type="text" id="name" name="gender" maxlength="200" required>
+
+            <label for="name">Month:</label>
+            <input type="text" id="name" name="month" maxlength="200" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="name" name="email" required>
+            
+            <label for="phone">PhoneNumber:</label>
+            <input type="number" id="name" name="phone_number" pattern="[0-10]{11}" required>
+            
+            <label for="course">Course:</label>
+            <input type="text" id="name" name="course" maxlength="300" required>
+            
+            <label for="location">Address:</label>
+            <input type="text" id="name" name="address" maxlength="200">
+            
+            <label for="state">State:</label>
+            <input type="text" id="name" name="state" maxlength="200">
+
+            <label for="name">Country:</label>
+            <input type="text" id="name" name="country" maxlength="200" required>
+
+            <label for="name">Value:</label>
+            <input type="text" id="name" name="value" maxlength="200" required>
+
+            <label for="name">Age:</label>
+            <input type="text" id="name" name="age" maxlength="200" required>
+
+            <label for="name">CurrentProgram :</label>
+            <input type="text" id="name" name="current_program" maxlength="200" required>
+
+            <label for="name">AcademicPerformance:</label>
+            <input type="text" id="name" name="academic_performance" maxlength="200" required>
+
+            <label for="name">YearOfStudy:</label>
+            <input type="text" id="name" name="year_of_study" maxlength="200" required>
+
+            <label for="name">AreaOfSpecialization:</label>
+            <input type="text" id="name" name="area_of_specializations" maxlength="200" required>
+
+            <label for="name">LeadershipPositionHeld:</label>
+            <input type="text" id="name" name="leadership_positions_held" maxlength="200" required>
+
+            <label for="name">DurationOfleaderShipRoles:</label>
+            <input type="text" id="name" name="duration_of_leadership_roles" maxlength="200" required>
+
+            <label for="name">LeaderShipAchievement:</label>
+            <input type="text" id="name" name="leadership_achievements_and_responsibilities" maxlength="200" required>
+
+            <label for="resume_cv_upload">Resume/CV Upload:</label>
+            <input type="file" id="name" name="resumeupload" accept=".pdf, .docx, .doc, .txt">
+
+            <label for="file_uploads">File Upload:</label>
+            <input type="file" id="name" name="fileupload" accept=".pdf, .docx, .doc, .txt">
+
+            <label for="image">Image Upload:</label>
+            <input type="file" id="name" name="image" accept="image/*">
+            
+            <button type="submit">Submit</button>
+            <button type="button" onclick="goBack()">Back</button>
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+           window.location.href = "{% url 'home' %}"  // Navigate back to the previous page
+        }
+    </script>
+</body>
+</html>

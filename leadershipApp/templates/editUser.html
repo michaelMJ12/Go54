@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'assets/images/mike.jpg' %}" rel="icon" />
+    <link href="{% static 'assets/images/mike.jpg' %}" rel="apple-touch-icon" />
+    <title>Edit Custom User</title>
+
+    <style>
+      /* Style for the card container */
+      .card-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 5px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      /* Style for form fields */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      /* Style for labels */
+      label {
+        font-weight: bold;
+      }
+
+      /* Style for the submit button */
+      button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Style for the h1 heading */
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card-container card">
+      <h1>Edit Custom User</h1>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          {{ form.email.label_tag }} {{ form.email }}
+        </div>
+
+        <div class="form-group">
+          {{ form.phone.label_tag }} {{ form.phone }}
+        </div>
+
+        <div class="form-group">
+          {{ form.first_name.label_tag }} {{ form.first_name }}
+        </div>
+
+        <div class="form-group">
+          {{ form.last_name.label_tag }} {{ form.last_name }}
+        </div>
+
+        <div class="form-group">
+          {{ form.image.label_tag }} {{ form.image }}
+        </div>
+
+         <div class="form-group">
+          <div class="col-sm-12 d-flex justify-content-between">
+            <button type="submit" class="btn btn-success text-white">
+              Update
+            </button>
+            <a
+              class="btn btn-danger text-white"
+              href="{% url 'profile' %}"
+            >
+              Back
+            </a>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>

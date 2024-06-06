@@ -1,0 +1,653 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+    
+<!-- Mirrored from templatemo.com/templates/templatemo_575_leadership_event/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Aug 2023 23:50:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+         <!-- Favicons -->
+        <link href="{% static 'images/logo.jpg' %}" rel="icon">
+        <link href="{% static 'images/logo.jpg' %}" rel="apple-touch-icon">
+
+
+        <title>Leadership</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+        <link href="{% static 'css2/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css2/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css2/templatemo-leadership-event.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        
+<!--
+
+TemplateMo 575 Leadership Event
+
+https://templatemo.com/tm-575-leadership-event
+-->
+<style>
+    .duration-icon {
+        color: #3498db; /* Change to your desired icon color */
+        margin-right: 5px;
+    }
+
+    .start-date-icon {
+        color: #e74c3c; /* Change to your desired icon color */
+        margin-right: 5px;
+    }
+
+    .course-details {
+        margin-top: 10px;
+    }
+
+    .certificates-section {
+            background-color: #f9f9f9;
+            padding: 40px;
+        }
+
+    .certificates-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    .cert-text {
+            font-size: 18px;
+        }
+
+    .cert-text h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+    .cert-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .cobe-section {
+            padding: 40px 0;
+        }
+
+    .cobe-intro-1 {
+            font-size: 18px;
+            color: #555;
+        }
+
+    .cobe-intro-2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+    .cobe-desc {
+            font-size: 18px;
+        }
+
+   
+</style>
+    </head>
+    
+    <body>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="" class="navbar-brand mx-auto mx-lg-0">
+                    <!-- <i class="bi-bullseye brand-logo"></i> -->
+                    <img src="{% static 'images/logo.jpg' %}" alt="" width="50px" height="50px" style="border-radius: 100%;">
+                    <span class="brand-text">Strategic<br>Leadership</span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll active" href="#section_1">Home</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">About</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Team</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Certificate</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_7">Contact</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Venue</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="{% url 'course' %}" target="_blank">Course</a>
+                        </li>
+                
+                        <li class="nav-item">
+                            <a class="nav-link custom-btn btn d-none d-lg-block" href="sign_up">Enroll</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="hero" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12 m-auto">
+                            <div class="hero-text">
+
+                                <h1 class="text-white mb-4"><u class="text-info">Canadian</u> Institute of Strategic Leadership (CISL)</h1>
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <span class="date-text">Inspirational</span>
+
+                                    <span class="location-text">Visionary</span>
+                                </div>
+
+                                <a href="#section_2" class="custom-link bi-arrow-down arrow-icon"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrap">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="#">
+                        <source src="{% static 'videos/pexels-pavel-danilyuk-8716790.mp4' %}" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+
+            <section class="highlight">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="highlight-thumb">
+                                <img src="{% static 'images/highlight/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg' %}" class="highlight-image img-fluid" alt="">
+
+                                <div class="highlight-info">
+                                    <h3 class="highlight-title">ElevateSphere Conference Hall</h3>
+
+                                    <!-- <a href="" class="bi-youtube highlight-icon"></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="highlight-thumb">
+                                <img src="{% static 'images/highlight/miguel-henriques--8atMWER8bI-unsplash.jpg' %}" class="highlight-image img-fluid" alt="">
+
+                                <div class="highlight-info">
+                                    <h3 class="highlight-title">Pinnacle Nexus Leadership Hub</h3>
+
+                                    <!-- <a href="" class="bi-youtube highlight-icon"></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="highlight-thumb">
+                                <img src="{% static 'images/highlight/jakob-dalbjorn-cuKJre3nyYc-unsplash.jpg' %}" class="highlight-image img-fluid" alt="">
+
+                                <div class="highlight-info">
+                                    <h3 class="highlight-title">InspireSymposium Hall</h3>
+
+                                    <!-- <a href="" class="bi-youtube highlight-icon"></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12">
+                            <h2 class="mb-4">About <u class="text-info">Us</u></h2>
+                        </div>
+                             {% for about in abouts %}
+                        <div class="col-lg-6 col-12">
+                            <!-- <h3 class="mb-3">The importance of Leadership Conference in 2022</h3> -->
+
+                            <p>{{about.description}}</p>
+
+                            <a class="custom-btn custom-border-btn btn custom-link mt-3 me-3"  href="sign_up">Enroll With Us</a>
+
+                            <!-- <a class="custom-btn btn custom-link mt-3" href="#section_4">Check out Schedule</a> -->
+                        </div>
+                            {% endfor %}
+                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                            <h5>In 333 BC, King Darius III of Persia had a much bigger and stronger army than of Alexander won. Why? This is because battles are never won during a fight, they are lost or won in the strategy war room before the war. its the same for life and business. Here at CISL we provide you with skills to strategize so you can win.</h5>
+
+                            <div class="avatar-group border-top py-5 mt-5">
+                                <img src="{% static 'images/avatar/portrait-good-looking-brunette-young-asian-woman.jpg' %}" class="img-fluid avatar-image" alt="">
+
+                                <img src="{% static 'images/avatar/happy-asian-man-standing-with-arms-crossed-grey-wall.jpg' %}" class="img-fluid avatar-image avatar-image-left" alt="">
+
+                                <img src="{% static 'images/avatar/senior-man-white-sweater-eyeglasses.jpg' %}" class="img-fluid avatar-image avatar-image-left" alt="">
+
+                                <img src="{% static 'images/avatar/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg' %}" class="img-fluid avatar-image avatar-image-left" alt="">
+
+                                <p class="d-inline"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="speakers section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+                                    {% for dashboard in dashboards %}
+                        <div class="col-lg-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                            <div class="speakers-text-info">
+                                <h2 class="mb-4"><u class="text-info">CEO</u></h2>
+
+                                <p>
+                                    {{dashboard.description}}
+                                </p>
+                            </div>
+                        </div>
+                                            
+
+                                        
+                        <div class="col-lg-6 col-12">
+                            <div class="speakers-thumb">
+                                             {% if dashboard.image %}
+                                <img src="{{dashboard.image.url}}" class="img-fluid speakers-image" alt="">
+                                                    {% endif %}
+                                <!-- <small class="speakers-featured-text">Featured</small> -->
+
+                                <div class="speakers-info">
+
+                                    <h5 class="speakers-title mb-0">Dr {{dashboard.name}}</h5>
+
+                                    <p class="speakers-text mb-0">CEO / Founder</p>
+
+                                    <ul class="social-icon">
+                                        <li><a href="https://www.facebook.com/cisl.institute" class="social-icon-link bi-facebook" target="_blank"></a></li>
+
+                                        <li><a href="https://www.instagram.com/cisl.institute" class="social-icon-link bi-instagram" target="_blank"></a></li>
+
+                                        <li><a href="https://www.youtube.com/@cisl.institute" class="social-icon-link bi-youtube" target="_blank"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                                                           {% endfor %}
+                        <!-- <div class="col-lg-12 col-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="speakers-thumb speakers-thumb-small">
+                                        <img src="images/avatar/portrait-good-looking-brunette-young-asian-woman.jpg" class="img-fluid speakers-image" alt="">
+
+                                        <div class="speakers-info">
+                                            <h5 class="speakers-title mb-0">Natalie</h5>
+
+                                            <p class="speakers-text mb-0">Event Planner</p>
+
+                                            <ul class="social-icon">
+                                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="speakers-thumb speakers-thumb-small">
+                                        <img src="images/avatar/senior-man-white-sweater-eyeglasses.jpg" class="img-fluid speakers-image" alt="">
+
+                                        <div class="speakers-info">
+                                            <h5 class="speakers-title mb-0">Thomas</h5>
+
+                                            <p class="speakers-text mb-0">Startup Coach</p>
+
+                                            <ul class="social-icon">
+                                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                                <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="speakers-thumb speakers-thumb-small">
+                                        <img src="images/avatar/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg" class="img-fluid speakers-image" alt="">
+
+                                        <div class="speakers-info">
+                                            <h5 class="speakers-title mb-0">Isabella</h5>
+
+                                            <p class="speakers-text mb-0">Event Manager</p>
+
+                                            <ul class="social-icon">
+                                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                                <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="speakers-thumb speakers-thumb-small">
+                                        <img src="images/avatar/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lec" class="img-fluid speakers-image" alt="">
+
+                                        <div class="speakers-info">
+                                            <h5 class="speakers-title mb-0">Samantha</h5>
+
+                                            <p class="speakers-text mb-0">Top Level Speaker</p>
+
+                                            <ul class="social-icon">
+                                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                                <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </section>
+
+
+          
+
+            <section class="call-to-action section-padding">
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-7 col-12">
+                            <h2 class="text-white mb-4">Become a <u class="text-info">Leader ?</u></h2>
+
+                            <p class="text-white">Leaders are dreamers who turn visions into reality. Imagine a better future, and let that vision guide your journey.</p>
+                        </div>
+
+                        <div class="col-lg-3 col-12 ms-lg-auto mt-4 mt-lg-0">
+                            <a href="{% url 'sign_up' %}" class="custom-btn btn">Register Today</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="pricing section-padding" id="section_5">
+                <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                    <h2>Get Your <u class="text-info">Certificate</u></h2>
+                </div>
+
+                <section class="certificates-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>Leadership and Strategic Institute Certificates</h2>
+                                <div class="cert-text">
+                                    <h3 class="text-info">Certificate of Achievement</h3>
+                                    <p>Showcase your professional accomplishment to your network and gain recognition for your successful completion! Upon finishing the program, the Leadership and Strategic Institute awards a verified digital certificate of achievement to participants, which you are encouraged to display on your profiles.</p>
+                                    <p><span style="font-size:12px;"><span class="text-info"> Note :</span>Once you successfully complete the program, your verified digital certificate will be sent to you via email. All certificate images are for illustrative purposes only and may be subject to change at the discretion of the Leadership and Strategic Institute.</span></p>
+                                    <p><a href="" target="" class="text-info">Earn a certificate</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="cert-image-wrapper">
+                                    <img src="{% static 'images/certificate.jpg' %}" class="cert-image" alt="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <section class="cobe-section" style="background-color: #deeffa;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="cobe-image-wrapper">
+                                    <img src="{% static 'images/logo.jpg' %}" alt="" class="berkeley-seal berkeley-seal-desktop" height="100px" style="border-radius: 100%;">
+                                </div>
+                                <div class="cobe-text">
+                                    <div class="cobe-intro-1">This program counts toward a</div>
+                                    <div class="cobe-intro-2"><span class="text-info"> Leadership and Strategic Institute Certificate of Excellence</span></div>
+                                    <div class="cobe-intro-3">
+                                        <div class="cobe-curriculum"> <span style="color:#273053;" style="font-size: xx-large;">Curriculum Days</span></div>
+                                        <div class="cobe-days">three days</div>
+                                    </div>
+                                    <div class="cobe-pillars">Pillar(s): <span class="cobe-pillar">Leadership &amp; Strategy</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="cobe-desc">
+                                    <p>Participants in the Leadership and Strategic Institute Certificate of Excellence program will earn a prestigious recognition from a reputable institute, gain access to a valuable professional network, and have the flexibility to complete the program within a specified time frame. The Leadership and Strategic Institute Certificate of Excellence enables individuals to craft a personalized learning journey centered around essential pillars of Leadership and Strategy, fostering personal and organizational growth.</p>
+                                    <!-- <p><a href="">Learn more</a></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+               
+            </section>
+
+            <section class="venue section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h2 class="mb-5">Here you go <u class="text-info">Venue</u></h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511.091461689997!2d-73.9866630916883!3d40.758001294831736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2ssg!4v1643035529098!5m2!1sen!2ssg" width="100%" height="371.59" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                            <div class="venue-thumb bg-white shadow-lg">
+                                
+                                <div class="venue-info-title">
+                                    <h2 class="text-white mb-0">Andrews Way SW</h2>
+                                </div>
+
+                                <div class="venue-info-body">
+                                    <h4 class="d-flex">
+                                        <i class="bi-geo-alt me-2"></i> 
+                                        <span>#105,6055 Andrews Way SW Edmonton, AB. T6W3S9</span>
+                                    </h4>
+
+                                    <h5 class="mt-4 mb-3">
+                                        <a href="mailto:leadershipdiary20@gmail.com">
+                                            <i class="bi-envelope me-2"></i>
+                                            leadershipdiary20@gmail.com
+                                        </a>
+                                    </h5>
+
+                                    <h5 class="mb-0">
+                                        <a href="tel: 305-240-9671">
+                                            <i class="bi-telephone me-2"></i>
+                                            +1(403)951-0010
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact section-padding" id="section_7">
+                <div class="container">
+                    {% if messages %}
+                    <ul class="messages" style="text-align: center; list-style: none;">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %} {% if message.tags == 'success' %}style="color: green;"{% elif message.tags == 'error' %}style="color: red;"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                        {% endif %}
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <form class="custom-form contact-form bg-white shadow-lg" action="{% url 'send' %}" method="post" role="form">
+                                 {% csrf_token %} 
+                                <h2>Please Say Hi</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-12">                                    
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-12">         
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required="">
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-12">                                    
+                                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+
+                                        <button type="submit" class="form-control">Submit</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-12 col-12 border-bottom pb-5 mb-5">
+                        <div class="d-flex">
+                            <a href="index-2.html" class="navbar-brand">
+                                <!-- <i class="bi-bullseye brand-logo"></i> -->
+                                <img src="{% static 'images/logo.jpg' %}" alt="" width="50px" height="50px" style="border-radius: 100%;">
+                                <span class="brand-text">Leadership <br>Strategic</span>
+                            </a>
+
+                            <ul class="social-icon ms-auto">
+                                <li><a href="https://www.facebook.com/cisl.institute" class="social-icon-link bi-facebook" target="_blank"></a></li>
+
+                                <li><a href="https://www.instagram.com/cisl.institute" class="social-icon-link bi-instagram" target="_blank"></a></li>
+
+                                <li><a href="https://www.twitter.com/cislinstitute" class="social-icon-link bi-twitter" target="_blank"></a></li>
+
+                                <li><a href="https://www.youtube.com/@cisl.institute" class="social-icon-link bi-youtube" target="_blank"></a></li>
+
+                                <li><a href="https://www.linkedin.com/company/canadian-institutefor-strategy-and-leadership-studies-cisl/?viewAsMember=true" class="social-icon-link bi-linkedin" target="_blank"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-12">
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="#section_1" class="footer-menu-link">Home</a></li>
+
+                            <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">About</a></li>
+
+                            <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Team</a></li>
+
+                            
+                            <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Certificate</a></li>
+
+                            
+                            <li class="footer-menu-item"><a href="{% url 'course' %}" class="footer-menu-link">Course</a></li>
+
+                            
+                            <li class="footer-menu-item"><a href="#section_6" class="footer-menu-link">Venue</a></li>
+
+                            <li class="footer-menu-item"><a href="#section_7" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                        
+                    <div class="col-lg-5 col-12 ms-lg-auto">
+                        <div class="copyright-text-wrap d-flex align-items-center">
+                            <p class="copyright-text ms-lg-auto me-4 mb-0">Copyright © 2023 Canadian Leadership and Strategic Institute
+                            
+                            <br>All Rights Reserved. 
+          
+          					<br><br>Design: <a title="CSS Templates" rel="sponsored" href="https://michaelpenetraliahub.github.io/Portfolio/" target="_blank" >Engr Rotimi</a></p>
+
+                            <a href="#section_1" class="bi-arrow-up arrow-icon custom-link"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js1/jquery.min.js' %}"></script>
+        <script src="{% static 'js1/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js1/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js1/click-scroll.js' %}"></script>
+        <script src="{% static 'js1/custom.js' %}"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get all navigation links
+                var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+                // Add click event listener to each navigation link
+                navLinks.forEach(function (link) {
+                    link.addEventListener('click', function (event) {
+                        // Remove active class from all navigation links
+                        navLinks.forEach(function (link) {
+                            link.classList.remove('active');
+                        });
+
+                        // Add active class to the clicked navigation link
+                        this.classList.add('active');
+                    });
+                });
+            });
+        </script>
+
+    </body>
+
+<!-- Mirrored from templatemo.com/templates/templatemo_575_leadership_event/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Aug 2023 23:50:56 GMT -->
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Favicons -->
+    <link href="{% static 'images/logo.jpg' %}" rel="icon">
+    <link href="{% static 'images/logo.jpg' %}" rel="apple-touch-icon">
+
+    
+    <title>Leadership</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'css2/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css2/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css2/templatemo-leadership-event.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+
+    <style>
+        .search-container {
+            text-align: right;
+            
+            
+        }
+
+        .search-input {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 70%;
+            max-width: 300px;
+        }
+
+        .search-icon {
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="" class="navbar-brand mx-auto mx-lg-0">
+                <!-- <i class="bi-bullseye brand-logo"></i> -->
+                <img src="{% static 'images/logo.jpg' %}" alt="" width="50px" height="50px" style="border-radius: 100%;">
+                <span class="brand-text">Leadership<br>Strategic</span>
+            </a>
+
+            <!-- <a class="nav-link custom-btn btn d-lg-none" href="#">Buy Tickets</a> -->
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">Team</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">Certificate</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'course' %}" target="_blank">Course</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">Venue</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="{% url 'home' %}">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link custom-btn btn d-none d-lg-block" href="{% url 'sign_up' %}">Enroll</a>
+                    </li>
+                </ul>
+            <div>
+                    
+        </div>
+    </nav>
+
+    <section class="pricing section-padding" id="">
+        
+        <div class="container">
+            <div class="row">
+
+                <div class="row">
+                    <div class="col-lg-10 col-12 text-center mx-auto mb-5">
+                        <h2>Get Your <u class="text-info">Course</u></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <form method="GET" action="{% url 'search' %}">
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="search-container">
+                                <input type="text" name="q" class="search-input" placeholder="Search courses...">
+                                <button class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                                   {% for course in courses %}
+               
+                                <div class="col-lg-4 col-md-6 col-12 mb-5 mb-lg-0 mt-4">
+                                    <div class="pricing-thumb bg-white shadow-lg">
+                                        <div class="pricing-title-wrap d-flex align-items-center">
+                                            <h4 class="pricing-title text-white mb-0"><i class="fas fa-book"></i>{{course.course_name}}</h4>
+                                            <!-- <h5 class="pricing-small-title text-white mb-0 ms-auto">₦{{course.course_price}}</h5> -->
+                                        </div>
+                                        <div class="pricing-body">
+                                            <p>{{course.course_description}}</p>
+                                            <p class="course-details">
+                                                <i class="far fa-clock duration-icon"></i> Duration: {{course.duration}}<br>
+                                                <i class="far fa-calendar start-date-icon"></i> Start Date: {{course.start_date}}
+                                            </p>
+                                            <a class="custom-btn btn mt-3" href="{% url 'sign_up' %}">Enroll Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                               {% endfor %}
+                <!-- <div class="col-lg-4 col-md-6 col-12 mb-5 mb-lg-0">
+                    <div class="pricing-thumb bg-white shadow-lg">                                
+                        <div class="pricing-title-wrap d-flex align-items-center">
+
+                            <h4 class="pricing-title text-white mb-0"> <i class="fas fa-book"></i> Leadership Master Class</h4>
+
+                            <h5 class="pricing-small-title text-white mb-0 ms-auto">$840</h5>
+                        </div>
+
+                        <div class="pricing-body">
+                            <p>
+                                This comprehensive course is not just another training program but a transformative experience tailored for those destined to lead. Whether you're an emerging leader or a seasoned professional looking to refine your skills, the Leadership Master Class offers a unique blend of traditional wisdom and modern insights. 
+                            </p>
+                            <p class="course-details">
+                                <i class="far fa-clock duration-icon"></i> Duration: 3 months<br>
+                                <i class="far fa-calendar start-date-icon"></i> Start Date: October 1st
+                            </p>
+                            <a class="custom-btn btn mt-3" href="#">Enroll Now</a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="col-lg-4 col-md-6 col-12">
+                    <div class="pricing-thumb bg-white shadow-lg">                                
+                        <div class="pricing-title-wrap d-flex align-items-center">
+
+                            <h4 class="pricing-title text-white mb-0"> <i class="fas fa-book"></i> Strategy Workshops</h4>
+
+                            <h5 class="pricing-small-title text-white mb-0 ms-auto">$1,240</h5>
+                        </div>
+
+                        <div class="pricing-body">
+                          <p>
+                             Enter a space where creativity meets pragmatism, where concepts become concrete plans. These sessions are not mere meetings but intense brainstorming arenas where ideas transform into actionable blueprints. Forge Ahead with Precision. Strategy Starts Here.
+                          </p>
+                          <p class="course-details">
+                            <i class="far fa-clock duration-icon"></i> Duration: 3 months<br>
+                            <i class="far fa-calendar start-date-icon"></i> Start Date: October 1st
+                        </p>
+
+                            <a class="custom-btn btn mt-3" href="#">Enroll Now</a>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-12 col-12 border-bottom pb-5 mb-5">
+                    <div class="d-flex">
+                        <a href="" class="navbar-brand">
+                            <!-- <i class="bi-bullseye brand-logo"></i> -->
+                            <img src="{% static 'images/logo.jpg' %}" alt="" width="50px" height="50px" style="border-radius: 100%;">
+                            <span class="brand-text">Leadership <br>Strategic</span>
+                        </a>
+
+                        <ul class="social-icon ms-auto">
+                            <li><a href="https://www.facebook.com/cisl.institute" class="social-icon-link bi-facebook" target="_blank"></a></li>
+
+                            <li><a href="https://www.instagram.com/cisl.institute" class="social-icon-link bi-instagram" target="_blank"></a></li>
+
+                            <li><a href="https://www.twitter.com/cislinstitute" class="social-icon-link bi-twitter" target="_blank"></a></li>
+
+                            <li><a href="https://www.youtube.com/@cisl.institute" class="social-icon-link bi-youtube" target="_blank"></a></li>
+
+                            <li><a href="https://www.linkedin.com/company/canadian-institutefor-strategy-and-leadership-studies-cisl/?viewAsMember=true" class="social-icon-link bi-linkedin" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 col-12">
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">Home</a></li>
+
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">About</a></li>
+
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">Team</a></li>
+
+                        
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">Certificate</a></li>
+
+                        
+                        <li class="footer-menu-item"><a href="{% url 'course' %}" class="footer-menu-link">Course</a></li>
+
+                        
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">Venue</a></li>
+
+                        <li class="footer-menu-item"><a href="{% url 'home' %}" class="footer-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                    
+                <div class="col-lg-5 col-12 ms-lg-auto">
+                    <div class="copyright-text-wrap d-flex align-items-center">
+                        <p class="copyright-text ms-lg-auto me-4 mb-0">Copyright © 2023 Canadian Leadership and Strategic Institute
+                        
+                        <br>All Rights Reserved. 
+      
+                          <br><br>Design: <a title="CSS Templates" rel="sponsored" href="https://michaelpenetraliahub.github.io/Portfolio/" target="_blank">Engr Rotimi</a></p>
+
+                        <a href="#section_1" class="bi-arrow-up arrow-icon custom-link"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
